@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 3 - Callbacks</title>
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../share/css/styles.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../../public/images/logo.png"alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="../../../portada.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../index.html">Crud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calbacks.html">Callback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../promises/promesas.html">Promesas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../asyncAwait/Async_Await.html">Async await</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../destructure/Destruc.html">Object Destructuring</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <main class="container mt-5 pt-4">
+        <h2>Actividad 3 - Callbacks</h2>
+
+        <p class="texto">
+             Una devolución de llamada (callback) es una función 
+            que se ejecuta <em>más tarde</em>, 
+            después de que finaliza otra función. Es una forma de manejar código asíncrono en JavaScript.<br><br>
+            Las callbacks se pasan como argumentos a otras funciones y se ejecutan cuando 
+            ocurre un evento o se termina una tarea.
+     </p>
+
+        <p><strong>Ejemplo sencillo de callback:</strong></p>
+        <pre>
+function done(value) {
+  myDisplayer(value);
+}
+
+setTimeout(function() {
+  done(5);
+}, 1000);
+        </pre>
+
+        <label for="inputPais">Buscar país:</label>
+        <input type="text" id="inputPais" placeholder="Ej: Mexico" />
+        <button id="btnBuscar">Buscar</button>
+
+        <div id="resultado" class="mt-3"></div>
+    </main>
+
+    <script src="calbacks.js"></script>
+    <footer class="text-center py-3 text-secondary small">
+        © 2026 — Talleres-React-SENA
+    </footer>
+</body>
+</html>
